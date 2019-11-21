@@ -11,6 +11,8 @@ const TabDiv = styled.div`
   cursor: pointer;
   height: 51px;
   line-height: 51px;
+  width: ${props => (props.itemWidth ? `${props.itemWidth}%` : '')};
+  text-align: center;
   &:hover {
     color: rgba(0, 0, 153, 1);
   }
@@ -76,10 +78,15 @@ const LTab = ({
   isHaveHover = false,
   isHomeWidth = false,
   isSelectAllBorder = false,
+  width,
+  itemWidth,
 }) => (
-  <div style={{ display: 'flex', flexDirection: 'row' }}>
+  <div
+    style={{ width: width || '100%', display: 'flex', flexDirection: 'row' }}
+  >
     {data.map((item, index) => (
       <TabDiv
+        itemWidth={itemWidth || 100 / data.length}
         key={`LTab${index + 1}`}
         select={Number(index) === Number(selectIndex)}
         onClick={() => onClick(index)}
@@ -103,6 +110,8 @@ LTab.propTypes = {
   onClick: PropTypes.func,
   isHaveHover: PropTypes.bool,
   isHomeWidth: PropTypes.bool,
+  width: PropTypes.number,
+  itemWidth: PropTypes.number,
   isSelectAllBorder: PropTypes.bool,
 };
 

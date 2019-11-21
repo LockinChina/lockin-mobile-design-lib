@@ -15,8 +15,8 @@ const ModalBg = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 320px;
-    margin-left: -160px;
+    width: 80%;
+    margin-left: -40%;
     height: 180px;
     margin-top: -90px;
     background: rgba(255, 255, 255, 1);
@@ -29,8 +29,8 @@ const ModalBg = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 320px;
-    margin-left: -160px;
+    width: 80%;
+    margin-left: -40%;
     height: 215px;
     margin-top: -108px;
     background: rgba(255, 255, 255, 1);
@@ -61,30 +61,29 @@ const ModalBg = styled.div`
   }
   .modal-title-content > div.btn-item {
     position: absolute;
-    right: 20px;
+    text-align: center;
+    left: 0;
     bottom: 10px;
+    width: 100%;
   }
 `;
 
 const ModalNodeContent = styled.div`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: ${props => (props.width ? `${props.width}px` : '470px')};
-  margin-left: ${props => (props.width ? `${-(props.width / 2)}px` : '-235px')};
-  max-height: ${Number(getWindowHeight() * 0.8).toFixed()}px;
+  top: 0;
+  left: 0;
+  width: 100%;
   overflow-y: auto;
-  margin-top: -${Number(getWindowHeight() * 0.8).toFixed() / 2}px;
+  height: 100%;
   background: rgba(255, 255, 255, 1);
-  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-  padding: 20px 20px 10px;
+  padding: 10px 0;
   & > div:first-child {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
+    padding: 10px 15px;
   }
 
   & > div:first-child > div:first-child {
@@ -100,16 +99,6 @@ const ModalNodeContent = styled.div`
     cursor: pointer;
   }
 `;
-
-function getWindowHeight() {
-  let windowHeight = 0;
-  if (document.compatMode === 'CSS1Compat') {
-    windowHeight = document.documentElement.clientHeight;
-  } else {
-    windowHeight = document.body.clientHeight;
-  }
-  return windowHeight;
-}
 
 const Modal = ({
   width,
@@ -152,7 +141,7 @@ const Modal = ({
         {isHaveButton && (
           <div className="btn-item">
             {btnStyle === 1 ? (
-              <div style={{ textAlign: 'right' }}>
+              <div>
                 <Button hollow type={2} onClick={() => onCancel()}>
                   {cancelText}
                 </Button>
@@ -161,7 +150,7 @@ const Modal = ({
                 </Button>
               </div>
             ) : (
-              <div style={{ textAlign: 'right' }}>
+              <div>
                 <Button type={4} onClick={() => onCancel()}>
                   {cancelText}
                 </Button>
@@ -192,7 +181,7 @@ const Modal = ({
         {isHaveButton && (
           <div>
             {btnStyle === 1 ? (
-              <div style={{ textAlign: 'right', marginTop: 10 }}>
+              <div style={{ marginTop: 10 }}>
                 <Button type={2} onClick={() => onCancel()}>
                   {cancelText}
                 </Button>
@@ -205,7 +194,7 @@ const Modal = ({
                 </Button>
               </div>
             ) : (
-              <div style={{ textAlign: 'right', marginTop: 10 }}>
+              <div style={{ marginTop: 10 }}>
                 <Button hollow type={4} onClick={() => onCancel()}>
                   {cancelText}
                 </Button>
