@@ -206,11 +206,11 @@ const DatePicker = React.forwardRef((props, ref) => {
             className="select-box animated-fast fadeInUp"
             style={{ display: isShow ? 'block' : 'none' }}
           >
-            <div className="closebox">
+            {/* <div className="closebox">
               <button className="close button" type="button">
                 关闭
               </button>
-            </div>
+            </div> */}
             <div className="rowbox" style={{ width: `${insideWidth}px` }}>
               {year()}
               {month()}

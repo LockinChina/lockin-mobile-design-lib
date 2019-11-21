@@ -5,6 +5,7 @@ import useForm from 'react-hook-form';
 import { GrayBox, Ptit, Space, Table } from '../../globalDemoStyle';
 
 import CascadeSelect from '../../lib/CascadeSelect/CascadeSelect';
+import CascadeSelectC from '../../lib/CascadeSelect/CascadeSelectC';
 import { degreeJson } from '../../static/data/degree';
 import { jobCategoryJson } from '../../static/data/jobCategory';
 
@@ -43,7 +44,7 @@ export default function InputDemo() {
         <Space />
         <form onSubmit={handleSubmit(onSubmit)}>
           <CascadeSelect
-            width={300}
+            // width={300}
             // max={2}
             // value={selectValue0}
             titleName="1级下拉菜单 自定义宽度"
@@ -63,12 +64,12 @@ export default function InputDemo() {
 
         <Space />
 
-        <CascadeSelect
-          width={600}
+        <CascadeSelectC
+          // width={600}
           // insideWidth = {500}
           // value={selectValue1}
           col={2}
-          // max={3}
+          max={3}
           titleName="2级下拉菜单(选三项)"
           placeholder="请选择"
           // eslint-disable-next-line no-unused-vars
@@ -106,7 +107,7 @@ export default function InputDemo() {
           invalid
         />
       </GrayBox>
-      <Table className="w">
+      <Table style={{ display: 'xnone' }}>
         <thead>
           <tr>
             <td>属性</td>

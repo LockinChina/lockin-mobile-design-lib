@@ -4,7 +4,6 @@ import Button from '../../lib/Button/Button';
 // import Toast from '../../lib/Toast/Toast';
 import '../../static/css/animated.css';
 import Toast from '../../lib/Toast/Toast';
-
 import { GrayBox, Ptit, Space, BtnSpace, Table } from '../../globalDemoStyle';
 
 export default function ButtonDemo() {
@@ -81,7 +80,7 @@ export default function ButtonDemo() {
           />
         </BtnSpace>
       </GrayBox>
-      <Table className="w">
+      <Table className="w" style={{ display: 'none' }}>
         <thead>
           <tr>
             <td>属性</td>

@@ -3,7 +3,14 @@ import CascadeSelectContainer from '../CascadeSelect/cascadeSelectStyle';
 
 const DatePickerContainer = styled(CascadeSelectContainer)`
   .select-box {
-    background: green;
+    background: #fff;
+    position: fixed;
+    z-index: 9;
+    /* top: 38px; */
+    bottom: 0px !important;
+    left: 0;
+    width: 100%;
+    border: 1px solid rgba(213, 213, 213, 1);
     height: 225px;
     .closebox {
       text-align: right;

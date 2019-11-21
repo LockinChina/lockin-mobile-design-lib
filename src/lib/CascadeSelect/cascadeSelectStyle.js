@@ -74,10 +74,11 @@ const CascadeSelectContainer = styled.div`
       position: fixed;
       z-index: 9;
       /* top: 38px; */
-      bottom: 100px;
+      bottom: 0;
       left: 0;
       width: 100%;
       border: 1px solid rgba(213, 213, 213, 1);
+      box-shadow: -10px 0px 10px rgba(136, 136, 136, 0.4);
       .maxSelectBox {
         padding: 20px;
       }
@@ -86,11 +87,12 @@ const CascadeSelectContainer = styled.div`
         min-width: 100%;
         flex-direction: row;
         background: rgba(255, 255, 255, 1);
-        box-shadow: 0px 2px 4px 0px rgba(136, 136, 136, 0.2);
-        border-radius: 0px 0px 3px 3px;
+        border-top: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+        /* border-radius: 0px 0px 3px 3px; */
       }
       ul {
-        max-height: 296px;
+        max-height: 256px;
         overflow-y: auto;
         &.col1 {
           width: 100%;

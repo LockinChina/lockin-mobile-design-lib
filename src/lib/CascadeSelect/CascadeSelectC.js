@@ -194,7 +194,7 @@ const CascadeSelect = React.forwardRef((props, ref) => {
           />
 
           <div
-            className="select-box animated-fast fadeInDown"
+            className="select-box animated-fast fadeInUp"
             style={{ display: isShow ? 'block' : 'none' }}
           >
             {max && (
@@ -278,11 +278,14 @@ const CascadeSelect = React.forwardRef((props, ref) => {
               )}
             </div>
             {max && (
-              <div style={{ padding: '15px', textAlign: 'right' }}>
-                <Button titleName={isCn ? '取消' : 'Cancel'} />
-                &nbsp;&nbsp;&nbsp;
+              <div style={{ display: 'flex', flexDirection: 'row' }}>
+                <Button
+                  titleName={isCn ? '取消' : 'Cancel'}
+                  style={{ flex: 1 }}
+                />
                 <Button
                   hollow
+                  style={{ flex: 1, borderRadius: 0 }}
                   titleName={isCn ? '确定' : 'Confirm'}
                   onClick={e => {
                     if (selectArr[0].length === 0) {

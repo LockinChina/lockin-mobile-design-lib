@@ -25,6 +25,7 @@ const ToastContainer = styled.div`
     border-radius: 5px;
     display: inline-block;
     max-width: 80%;
+    font-size: 14px;
   }
 `;
 

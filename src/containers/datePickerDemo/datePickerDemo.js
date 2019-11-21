@@ -8,7 +8,7 @@ import { GrayBox, Ptit, Space, Table } from '../../globalDemoStyle';
 
 const Rowbox = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 `;
 
 export default function DatePickerDemo() {
@@ -25,53 +25,31 @@ export default function DatePickerDemo() {
 
         <Space />
 
-        <Rowbox>
+        <Rowbox style={{ flexDirection: 'column' }}>
           <DatePicker
             titleName="选择年月"
-            width={280}
             defaultValue="2019-10"
             // onChange={e => {
             //   setDateV1(e.join('-'));
             // }}
           />
-          <div style={{ width: '20px' }} />
-          <DatePicker
-            titleName="选择年月日"
-            hasDay
-            placeholder="请选择"
-            width={280}
-          />
-          <div style={{ width: '20px' }} />
+          <div style={{ height: '20px' }} />
+          <DatePicker titleName="选择年月日" hasDay placeholder="请选择" />
+          <div style={{ height: '20px' }} />
           <DatePicker
             titleName="至今"
             type={!true ? '至今' : 'now'}
             placeholder="请选择"
-            width={280}
             wrongText="请选择"
           />
         </Rowbox>
         <Space />
-        <Rowbox>
-          <DatePicker
-            titleName="无经验"
-            placeholder="请选择"
-            width={280}
-            type="无经验"
-          />
-          <div style={{ width: '20px' }} />
-          <DatePicker
-            titleName="+5年"
-            placeholder="请选择"
-            width={280}
-            type="gTime"
-          />
-          <div style={{ width: '20px' }} />
-          <DatePicker
-            titleName="失效"
-            placeholder="请选择"
-            width={280}
-            invalid
-          />
+        <Rowbox style={{ flexDirection: 'column' }}>
+          <DatePicker titleName="无经验" placeholder="请选择" type="无经验" />
+          <div style={{ height: '20px' }} />
+          <DatePicker titleName="+5年" placeholder="请选择" type="gTime" />
+          <div style={{ height: '20px' }} />
+          <DatePicker titleName="失效" placeholder="请选择" invalid />
         </Rowbox>
       </GrayBox>
       <Table className="w">

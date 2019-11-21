@@ -17,15 +17,14 @@ const SliderContainer = styled.div`
       margin-left: 20px;
     }
   }
-  .skillslider {
+  /* .skillslider {
     margin-left: 10px;
-  }
+  } */
   .skellP {
-    white-space: nowrap;
     font-size: 12px;
     color: #959595;
     line-height: 20px;
-    height: 25px;
+    /* height: 25px; */
     margin-top: 10px;
   }
   .rc-slider-handle {

@@ -116,7 +116,8 @@ const Sliders = React.forwardRef((props, ref) => {
         </p>
       )}
       <input type="hidden" value={skillNumber} name={name} ref={ref} />
-      <div className={disabled ? 'row' : ''}>
+      {/* <div className={disabled ? 'row' : ''}> */}
+      <div>
         <div className="skillslider" style={{ width }}>
           <Slider
             min={min}
@@ -176,7 +177,7 @@ const Sliders = React.forwardRef((props, ref) => {
 Sliders.defaultProps = {
   min: 0,
   max: 100,
-  width: 500,
+  width: '100%',
   // initValue: 0,
   disabled: false,
   onChange: () => {},

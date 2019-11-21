@@ -28,7 +28,7 @@ export default function DatePickerDemo() {
         />
         {mask && <LoadingDemo message="我3秒后消失" />}
       </GrayBox>
-      <Table className="w">
+      <Table>
         <thead>
           <tr>
             <td>属性</td>

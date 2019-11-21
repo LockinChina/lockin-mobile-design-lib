@@ -1,19 +1,12 @@
+/* eslint-disable no-alert */
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
 import styled from 'styled-components';
 import Image from '../../lib/Image/Image';
 import { GrayBox, Ptit, Space, Table } from '../../globalDemoStyle';
 
-const Rowbox = styled.div`
-  > div {
-    margin-right: 20px;
-    > p {
-      margin-bottom: 10px;
-    }
-  }
-  display: flex;
-  flex-direction: row;
-`;
+const Rowbox = styled.div``;
 
 export default function ImageDemo() {
   return (
@@ -21,7 +14,7 @@ export default function ImageDemo() {
       <GrayBox>
         <Ptit>头像 / 图片：</Ptit>
         <Space />
-        <Rowbox>
+        <Rowbox style={{ flexDirection: 'column' }}>
           <div>
             <p>默认</p>
             <Image />
@@ -90,7 +83,7 @@ export default function ImageDemo() {
           </div>
         </Rowbox>
       </GrayBox>
-      <Table className="w">
+      <Table style={{ maxWidth: '100%' }}>
         <thead>
           <tr>
             <td>属性</td>

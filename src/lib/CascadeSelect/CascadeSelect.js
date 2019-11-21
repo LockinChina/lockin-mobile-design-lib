@@ -145,7 +145,7 @@ const CascadeSelect = React.forwardRef((props, ref) => {
       <p className="title" style={{ display: titleName ? 'block' : 'none' }}>
         {titleName}
       </p>
-      <div className="box" style={{ position: 'relative' }}>
+      <div className="box">
         {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
         <div
           className={`inputBody fadeAnim ${isShow ? 'openActive ' : ''}${
@@ -175,7 +175,7 @@ const CascadeSelect = React.forwardRef((props, ref) => {
           />
 
           <div
-            className="select-box animated-fast fadeInDown"
+            className="select-box animated-fast fadeInUp"
             style={{ display: isShow ? 'block' : 'none' }}
           >
             {max && (
@@ -259,12 +259,20 @@ const CascadeSelect = React.forwardRef((props, ref) => {
               )}
             </div>
             {max && (
-              <div style={{ padding: '15px', textAlign: 'right' }}>
-                <Button titleName="取消" />
-                &nbsp;&nbsp;&nbsp;
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                }}
+              >
+                <Button titleName="取消" style={{ borderRadius: 0, flex: 1 }} />
                 <Button
                   hollow
-                  titleName="保存"
+                  style={{
+                    flex: 1,
+                    borderRadius: 0,
+                  }}
+                  titleName="确定"
                   onClick={e => {
                     if (selectArr[0].length === 0) {
                       e.stopPropagation();
