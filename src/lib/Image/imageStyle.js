@@ -14,7 +14,7 @@ const ImageContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-size: cover !important;
     background-position: center center;
     background-color: #f8f8f8;
@@ -24,30 +24,24 @@ const ImageContainer = styled.div`
       max-width: 100%;
     }
     .uploadbox {
-      display: none;
+      /* display: none; */
       position: absolute;
+      display: flex;
       justify-content: center;
       align-items: center;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      width: 30px;
+      height: 30px;
+      bottom: -5px;
+      right: -5px;
+      background: #fff;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
       z-index: 1;
-      &::before {
-        position: absolute;
-        top: 0%;
-        left: 0;
-        content: '';
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.2);
-        z-index: 0;
-      }
       .iconfont {
         position: relative;
         font-family: 'lockinu' !important;
-        color: #fff;
-        font-size: 24px;
+        color: #13b5b0;
+        font-size: 14px;
         z-index: 1;
       }
       .fileBtn {
