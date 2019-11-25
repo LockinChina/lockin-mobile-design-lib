@@ -23,7 +23,9 @@ export default function ImageDemo() {
             <p>上传头像</p>
             <Image
               width={80}
-              radius={5}
+              radius={20}
+              backgroundIm="0"
+              backgroundColor="#ccc"
               height={80}
               upload
               fileOnChange={e => alert(e)}
@@ -45,8 +47,8 @@ export default function ImageDemo() {
             <Image
               width={160}
               height={120}
-              // radius={50}
-              // upload
+              radius={50}
+              upload
               imUrl="https://image.lockinchina.com/next/2019-09-16/c19f9bd2-4319-42fd-8a28-88d2fe6ea887.jpg"
               backgroundIm="0"
               link="http://www.lockinchina.com/network/1260.html"

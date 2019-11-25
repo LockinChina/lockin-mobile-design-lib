@@ -5,23 +5,28 @@ const ImageContainer = styled.div`
   position: relative;
   .im {
     cursor: pointer;
-    &:hover .uploadbox {
-      display: flex;
-    }
     position: relative;
     background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     /* overflow: hidden; */
     background-size: cover !important;
     background-position: center center;
     background-color: #f8f8f8;
-    > img {
-      display: block;
-      max-height: 100%;
-      max-width: 100%;
+    .imc {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & > img {
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+      }
     }
     .uploadbox {
       /* display: none; */

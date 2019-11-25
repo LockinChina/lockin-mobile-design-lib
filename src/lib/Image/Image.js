@@ -44,16 +44,22 @@ function Image(props) {
         // onClick={() => {}}
         className="im"
         style={{
-          borderRadius: `${radius}px`,
           width,
           height,
           backgroundImage: backgroundIm === 0 ? 'none' : `url(${backgroundIm})`,
-          border: borderColor ? `1px solid ${borderColor}` : 'none',
-          backgroundColor: backgroundColor || 'none',
-          cursor: link ? 'pointer' : 'default',
         }}
       >
-        <img src={imUrl} alt={imAlt} radius={radius} />
+        <div
+          className="imc"
+          style={{
+            border: borderColor ? `1px solid ${borderColor}` : 'none',
+            cursor: link ? 'pointer' : 'default',
+            borderRadius: `${radius}px`,
+            backgroundColor: backgroundColor || 'none',
+          }}
+        >
+          <img src={imUrl} alt={imAlt} radius={radius} />
+        </div>
         {upload && (
           <div className="uploadbox">
             <span className="iconfont iconxiangji" />
