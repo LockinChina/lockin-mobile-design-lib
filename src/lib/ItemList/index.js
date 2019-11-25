@@ -9,8 +9,11 @@ const List = styled.div`
   height: 60px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
   position: relative;
+  &.border-bottom::before{
+   border-color: #bbb;
+  }
   .leftIcon {
     width: 34px;
     color: #ccc;
@@ -47,10 +50,7 @@ function Index(props) {
     leftContent,
   } = props;
   return (
-    <List
-      onClick={() => onClick()}
-      style={noBorder && { borderBottom: 'none' }}
-    >
+    <List className={!noBorder && 'border-bottom'} onClick={() => onClick()}>
       {iconName && (
         <div
           style={{ fontSize: iconSize }}

@@ -15,7 +15,6 @@ import MenuItemList from '../src/lib/MenuItemList';
 import BottomTab from '../src/lib/BottomTab';
 
 import GlobelStyle from '../src/globalStyle';
-import '../src/static/iconfont/iconfont.css';
 import ButtonDemo from '../src/containers/buttonDemo/ButtonDemo';
 import InputDemo from '../src/containers/inputDemo/InputDemo';
 import TextAreaDemo from '../src/containers/textAreaDemo/textAreaDemo';
@@ -28,6 +27,9 @@ import EmptyDemo from '../src/containers/emptyDemo/EmptyDemo'
 import BackTopDemo from '../src/containers/backTopDemo/BackTopDemo'
 import SchoolSelectDemo from '../src/containers/schoolSelectDemo/SchoolSelectDemo';
 import Pagination from '../src/containers/pagination';
+
+import '../src/static/iconfont/iconfont.css';
+import '../src/static/css/border.css';
 
 storiesOf('BottomTab', module).add('BottomTab', () =>
   <div>
