@@ -37,9 +37,12 @@ const List = styled.div`
 `;
 
 function Index(props) {
-  const { text, iconName, iconSize, rightArrow, onClick } = props;
+  const { text, iconName, iconSize, rightArrow, onClick, noBorder } = props;
   return (
-    <List onClick={() => onClick()}>
+    <List
+      onClick={() => onClick()}
+      style={noBorder && { borderBottom: 'none' }}
+    >
       {iconName && (
         <div
           style={{ fontSize: iconSize }}
@@ -65,5 +68,6 @@ Index.propTypes = {
   iconSize: PropTypes.string,
   iconName: PropTypes.string,
   rightArrow: PropTypes.bool,
+  noBorder: PropTypes.bool,
   onClick: PropTypes.func,
 };
