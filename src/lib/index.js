@@ -21,3 +21,7 @@ export { default as SchoolSelect } from './SchoolSelect/SchoolSelect';
 export { default as Slider } from './Slider/Slider';
 export { default as TextArea } from './TextArea/TextArea';
 export { default as Toast } from './Toast/Toast';
+export { default as BottomTab } from './BottomTab/index';
+export { default as ItemList } from './ItemList/index';
+export { default as MenuItemList } from './MenuItemList/index';
+export { default as SearchBarMobile } from './SearchBarMobile/index';
