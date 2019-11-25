@@ -11,8 +11,13 @@ const TabDiv = styled.div`
   cursor: pointer;
   height: 51px;
   line-height: 51px;
+  background: #fff;
   width: ${props => (props.itemWidth ? `${props.itemWidth}%` : '')};
   text-align: center;
+  outline: none;
+  &:active {
+    background: #f8f8f8;
+  }
   &:hover {
     color: rgba(0, 0, 153, 1);
   }
@@ -110,8 +115,8 @@ LTab.propTypes = {
   onClick: PropTypes.func,
   isHaveHover: PropTypes.bool,
   isHomeWidth: PropTypes.bool,
-  width: PropTypes.number,
-  itemWidth: PropTypes.number,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  itemWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   isSelectAllBorder: PropTypes.bool,
 };
 

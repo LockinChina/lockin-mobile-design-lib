@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Button from './Button/Button';
+import { Button } from 'lockin-web-components';
 
 const ModalBg = styled.div`
   position: fixed;
@@ -223,7 +223,7 @@ Modal.propTypes = {
   onOk: PropTypes.func,
   onCancel: PropTypes.func,
   cancelText: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   contentNode: PropTypes.node,
   btnStyle: PropTypes.number,
   isHaveButton: PropTypes.bool,
