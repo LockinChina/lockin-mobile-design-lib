@@ -13,7 +13,7 @@ const List = styled.div`
   position: relative;
   .leftIcon {
     width: 34px;
-    color: #757575;
+    color: #ccc;
   }
   .rightIcon{
     width: 28px;
