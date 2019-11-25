@@ -37,7 +37,15 @@ const List = styled.div`
 `;
 
 function Index(props) {
-  const { text, iconName, iconSize, rightArrow, onClick, noBorder } = props;
+  const {
+    text,
+    iconName,
+    iconSize,
+    rightArrow,
+    onClick,
+    noBorder,
+    leftContent,
+  } = props;
   return (
     <List
       onClick={() => onClick()}
@@ -49,6 +57,7 @@ function Index(props) {
           className={`leftIcon ${iconName ? `lockinu ${iconName}` : ''}`}
         />
       )}
+      {leftContent && <div>{leftContent}</div>}
       <p className="text1">{text}</p>
       {rightArrow && <div className="rightIcon" />}
     </List>
@@ -70,4 +79,5 @@ Index.propTypes = {
   rightArrow: PropTypes.bool,
   noBorder: PropTypes.bool,
   onClick: PropTypes.func,
+  leftContent: PropTypes.node,
 };

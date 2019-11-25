@@ -47,7 +47,7 @@ storiesOf('MenuItemList', module).add('MenuItemList', () =>
 );
 
 storiesOf('ItemList', module).add('ItemList', () =>
-  <div><ItemList text="测试列表" /><ItemList text="测试列表" iconName="iconshoucang" onClick={() => alert(1)} noBorder rightArrow /></div>
+  <div><ItemList leftContent={<span></span>} text="测试列表" /><ItemList text="测试列表" iconName="iconshoucang" onClick={() => alert(1)} noBorder rightArrow /></div>
 );
 storiesOf('SearchBarMobile', module).add('SearchBarMobile', () =>
   <SearchBarMobile placeholder="请输入" />
