@@ -91,16 +91,24 @@ Index.defaultProps = {
   listData: [
     {
       name: '雇主邀约',
-      iconName: 'iconshipin',
-      selectedIconName: 'iconxinxi',
+      iconName: 'iconicons_circle1',
+      selectedIconName: 'iconicons_circle',
       unReadNum: 10,
     },
-    { name: '找工作', iconName: 'iconshipin', selectedIconName: 'iconxinxi' },
-    { name: '活动', iconName: 'iconshipin', selectedIconName: 'iconxinxi' },
+    {
+      name: '找工作',
+      iconName: 'iconicons_jobs1',
+      selectedIconName: 'iconicons_jobs',
+    },
+    {
+      name: '活动',
+      iconName: 'iconicons_activity1',
+      selectedIconName: 'iconicons_activity',
+    },
     {
       name: '我的',
-      iconName: 'iconshipin',
-      selectedIconName: 'iconxinxi',
+      iconName: 'iconicons_mine1',
+      selectedIconName: 'iconicons_mine',
       isTip: true,
     },
   ],

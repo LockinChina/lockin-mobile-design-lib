@@ -27,11 +27,32 @@
       "unicode_decimal": 59105
     },
     {
+      "icon_id": "1544666",
+      "name": "地球探索",
+      "font_class": "diqiu",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
       "icon_id": "1766271",
       "name": "指向-top",
       "font_class": "top",
       "unicode": "e676",
       "unicode_decimal": 58998
+    },
+    {
+      "icon_id": "2570061",
+      "name": "心",
+      "font_class": "heart",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "3849980",
+      "name": "设置",
+      "font_class": "seting",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
     },
     {
       "icon_id": "3878686",
@@ -326,6 +347,69 @@
       "font_class": "resumeF",
       "unicode": "e693",
       "unicode_decimal": 59027
+    },
+    {
+      "icon_id": "11961036",
+      "name": "icons_mine01",
+      "font_class": "icons_mine",
+      "unicode": "e694",
+      "unicode_decimal": 59028
+    },
+    {
+      "icon_id": "11961037",
+      "name": "icons_mine02",
+      "font_class": "icons_mine1",
+      "unicode": "e695",
+      "unicode_decimal": 59029
+    },
+    {
+      "icon_id": "11961038",
+      "name": "icons_activity02",
+      "font_class": "icons_activity",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    },
+    {
+      "icon_id": "11961039",
+      "name": "icons_activity01",
+      "font_class": "icons_activity1",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "11961040",
+      "name": "icons_circle02",
+      "font_class": "icons_circle",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "11961041",
+      "name": "icons_jobs02",
+      "font_class": "icons_jobs",
+      "unicode": "e699",
+      "unicode_decimal": 59033
+    },
+    {
+      "icon_id": "11961042",
+      "name": "icons_circle01",
+      "font_class": "icons_circle1",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "11961099",
+      "name": "icons_jobs01",
+      "font_class": "icons_jobs1",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
+    },
+    {
+      "icon_id": "11963805",
+      "name": "HOME",
+      "font_class": "HOME",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
     }
   ]
 }
