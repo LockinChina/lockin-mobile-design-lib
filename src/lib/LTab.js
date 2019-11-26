@@ -6,8 +6,8 @@ const TabDiv = styled.div`
   font-size: 16px;
   font-weight: 400;
   color: rgba(100, 100, 100, 1);
-  padding: 0 ${props => (props.isHomeWidth ? '10px' : '30px')};
   position: relative;
+  white-space: nowrap;
   cursor: pointer;
   height: 51px;
   line-height: 51px;

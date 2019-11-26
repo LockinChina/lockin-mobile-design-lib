@@ -4,33 +4,31 @@ import PropTypes from 'prop-types';
 
 const Tab = styled.div`
   width: 100%;
-  height: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 5px 0;
   background: rgba(250, 250, 250, 0.95);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
+  border-top: 1px solid #ccc;
 `;
 
 const TabItem = styled.div`
-  height: 50px;
   width: 25%;
   display: flex;
   flex-direction: column;
-  height: 50px;
   align-items: center;
   justify-items: center;
   position: relative;
   > div:first-child:before {
     font-size: 20px;
   }
-  > div:last-child {
+  .nav-title {
     width: 100%;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 5px;
   }
   ${props =>
@@ -64,18 +62,29 @@ const TabItem = styled.div`
 `;
 
 function Index(props) {
-  const { listData, selectIndex } = props;
+  const { listData, selectIndex, navClick } = props;
   return (
     <Tab>
       {listData.map((item, index) => (
-        <TabItem key={`listData${index + 1}`} isTip={item.isTip}>
+        <TabItem
+          key={`listData${index + 1}`}
+          isTip={item.isTip}
+          onClick={() => navClick()}
+        >
           <div
             className={`lockinu ${
               index === selectIndex ? item.selectedIconName : item.iconName
             }`}
-            style={{ color: `${index === selectIndex ? 'blue' : '#ccc'}` }}
+            style={{
+              color: `${index === selectIndex ? '#013370' : '#959595'}`,
+            }}
           />
-          <div style={{ color: `${index === selectIndex ? 'blue' : '#ccc'}` }}>
+          <div
+            className="nav-title"
+            style={{
+              color: `${index === selectIndex ? '#013370' : '#959595'}`,
+            }}
+          >
             {item.name}
           </div>
           {item.unReadNum && <span className="num-tip">{item.unReadNum}</span>}
@@ -93,7 +102,7 @@ Index.defaultProps = {
       name: '雇主邀约',
       iconName: 'iconicons_circle1',
       selectedIconName: 'iconicons_circle',
-      unReadNum: 10,
+      unReadNum: '',
     },
     {
       name: '找工作',
@@ -109,7 +118,7 @@ Index.defaultProps = {
       name: '我的',
       iconName: 'iconicons_mine1',
       selectedIconName: 'iconicons_mine',
-      isTip: true,
+      isTip: false,
     },
   ],
 };
@@ -117,4 +126,5 @@ Index.defaultProps = {
 Index.propTypes = {
   listData: PropTypes.array,
   selectIndex: PropTypes.number,
+  navClick: PropTypes.func,
 };
