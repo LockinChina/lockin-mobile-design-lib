@@ -10,7 +10,6 @@ const ImageContainer = styled.div`
     /* overflow: hidden; */
     background-size: cover !important;
     background-position: center center;
-    background-color: #f8f8f8;
     .imc {
       position: absolute;
       width: 100%;
