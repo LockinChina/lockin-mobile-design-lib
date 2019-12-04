@@ -1,12 +1,9 @@
 import styled from 'styled-components';
 
 const Input = styled.div`
-  .text {
-    font-size: 14px;
-  }
   .title {
     height: 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: rgba(51, 51, 51, 1);
     line-height: 20px;
@@ -57,6 +54,7 @@ const Input = styled.div`
       line-height: 22px;
       background: none;
       border: none;
+      font-size: 14px;
     }
   }
   .wrongText {

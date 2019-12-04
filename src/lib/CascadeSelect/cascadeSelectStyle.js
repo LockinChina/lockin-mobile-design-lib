@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 const CascadeSelectContainer = styled.div`
-  .text {
-    font-size: 14px;
-  }
   .title {
     height: 20px;
     font-size: 14px;
@@ -20,7 +17,7 @@ const CascadeSelectContainer = styled.div`
     flex-direction: row;
     border: 1px solid #a0a0a0;
     background: #fff;
-    height: 36px;
+    height: 42px;
     border-radius: 2px;
     width: 100%;
     align-items: center;
@@ -61,13 +58,13 @@ const CascadeSelectContainer = styled.div`
     .text {
       flex: 1;
       box-sizing: border-box;
-      padding: 8px 10px;
-      line-height: 20px;
-      padding: 8px 10px;
+      padding: 10px 10px;
+      line-height: 22px;
       background: none;
       border: none;
       cursor: pointer;
       color: #444;
+      font-size: 14px;
     }
     .select-box {
       background: #fff;
@@ -93,9 +90,13 @@ const CascadeSelectContainer = styled.div`
       }
       ul {
         max-height: 256px;
+        min-height: 200px;
         overflow-y: auto;
         &.col1 {
           width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
         &.col2 {
           width: 50%;

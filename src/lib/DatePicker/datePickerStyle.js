@@ -34,7 +34,7 @@ const DatePickerContainer = styled(CascadeSelectContainer)`
           height: 50px;
           justify-content: center;
           align-items: center;
-          font-size: 15px;
+          font-size: 13px;
           padding: 0 0;
           color: #000;
         }
