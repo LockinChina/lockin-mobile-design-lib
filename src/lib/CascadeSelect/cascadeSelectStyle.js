@@ -94,9 +94,10 @@ const CascadeSelectContainer = styled.div`
         overflow-y: auto;
         &.col1 {
           width: 100%;
-          display: flex;
+          text-align: center;
+          /* display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: center; */
         }
         &.col2 {
           width: 50%;

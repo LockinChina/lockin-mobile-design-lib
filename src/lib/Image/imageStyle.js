@@ -6,8 +6,6 @@ const ImageContainer = styled.div`
   .im {
     cursor: pointer;
     position: relative;
-    background: white;
-    /* overflow: hidden; */
     background-size: cover !important;
     background-position: center center;
     .imc {
