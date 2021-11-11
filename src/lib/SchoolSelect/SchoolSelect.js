@@ -6,6 +6,12 @@ import InputV from '../Input/InputV';
 import SchoolSelectContainer from './SchoolSelectStyle';
 
 let timer = null;
+const stripHtmlTags = str => {
+  if (str === null || str === '') return false;
+  // eslint-disable-next-line no-param-reassign
+  str = str.toString();
+  return str.replace(/<[^>]*>/g, '');
+};
 
 // eslint-disable-next-line no-unused-vars
 const SchoolSelect = React.forwardRef((props, ref) => {
@@ -38,30 +44,29 @@ const SchoolSelect = React.forwardRef((props, ref) => {
   }, [isUpload]);
 
   useEffect(() => {
-    // eslint-disable-next-line func-names
     document.onclick = () => {
       setIsShow(false);
     };
     clearTimeout(timer);
     timer = setTimeout(() => {
-      axios.post(`${api}${sValue}`).then(res => {
-        if (res.status === 200) {
-          const { data } = res;
-          // console.log(res);
-          if (data && data.response && data.response.docs) {
-            if (data.response.docs.length > 0) {
-              setSchoolData(data.response.docs);
+      axios
+        .get(`https://smartschoolsearch.lockinu.com/suggest?search=${sValue}`)
+        .then(res => {
+          if (res.status === 200) {
+            if (res.data) {
+              if (res.data.length > 0) {
+                setSchoolData(res.data);
+              } else {
+                setSchoolData([]);
+                // setSe(true);
+              }
             } else {
               setSchoolData([]);
               // setSe(true);
             }
-          } else {
-            setSchoolData([]);
-            // setSe(true);
           }
-        }
-      });
-    }, 300);
+        });
+    }, 1000);
   }, [sValue, api]);
 
   return (
@@ -114,18 +119,33 @@ const SchoolSelect = React.forwardRef((props, ref) => {
                 {schoolData.map((item, index) => {
                   if (index < 10) {
                     return (
-                      <li key={item.id}>
+                      // eslint-disable-next-line react/no-array-index-key
+                      <li key={`sc-${index}`}>
                         <a
                           href="javascript:;"
                           onClick={() => {
                             setIsShow(false);
                             // onChange(item.schoolName, item.id);
-                            setVlaue(item.schoolName);
-                            setSValueId(item.id);
+                            setVlaue(stripHtmlTags(item.term));
+                            // setSValueId(item.id);
+                            axios
+                              .get(
+                                `https://smartschoolsearch.lockinu.com/querySchool?search=${encodeURI(
+                                  stripHtmlTags(item.term),
+                                )}`,
+                              )
+                              .then(res => {
+                                if (res.status === 200) {
+                                  // console.log(res.data);
+                                  if (res.data) {
+                                    setSValueId(res.data.id);
+                                  }
+                                }
+                              });
                           }}
-                        >
-                          {item.schoolName}
-                        </a>
+                          // eslint-disable-next-line react/no-danger
+                          dangerouslySetInnerHTML={{ __html: item.term }}
+                        />
                       </li>
                     );
                   }
@@ -147,7 +167,7 @@ SchoolSelect.defaultProps = {
   // onChange: () => { },
   // inputChange: () => { },
 
-  api: `${process.env.API}/schoolSearch?s=`,
+  api: `https://smartschoolsearch.lockinu.com/`,
   emptyMessage: '暂无搜索结果，请更换搜索关键词。或直接在输入框中添加大学',
 };
 
